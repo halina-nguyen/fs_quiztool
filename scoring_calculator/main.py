@@ -19,9 +19,6 @@ from src.trackdrive import TrackdriveTab
 root = tk.Tk()
 root.title("Scoring calculator")
 
-style = ttk.Style(root)
-style.theme_use('clam')
-
 notebook = ttk.Notebook(root)
 
 bpp_tab = BPPTab(notebook)

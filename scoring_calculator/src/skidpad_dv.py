@@ -27,12 +27,14 @@ class SkidpadDVTab:
         label_n_all.grid(row=1, column=0, padx=10, pady=10)
 
         self.entry_n_all = tk.Entry(self.tab)
+        self.entry_n_all.insert(0, "0.0")
         self.entry_n_all.grid(row=1, column=1, padx=10, pady=10)
 
         label_r_dv = tk.Label(self.tab, text="Team's position (incl. penalties):")
         label_r_dv.grid(row=2, column=0, padx=10, pady=10)
 
         self.entry_r_dv = tk.Entry(self.tab)
+        self.entry_r_dv.insert(0, "0.0")
         self.entry_r_dv.grid(row=2, column=1, padx=10, pady=10)
 
         calculate_button = tk.Button(self.tab, text="Calculate Skidpad DV Score", command=self.calculate_skidpad_dv)

@@ -21,7 +21,7 @@ class SkidpadTab:
         t_max_cones = float(self.entry_t_max_cones.get())
 
         t_team += (t_team_cones * doo)
-        t_max *= 1.25
+        t_max *= 1.25 + (t_max_cones * doo)
 
         if t_team < t_max:
             score = 0.95 * p_max * (((t_max/t_team)**2 - 1) / 0.5625)
