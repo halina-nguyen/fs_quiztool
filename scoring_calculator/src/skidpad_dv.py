@@ -35,7 +35,7 @@ class SkidpadDVTab:
         self.entry_r_dv = tk.Entry(self.tab)
         self.entry_r_dv.grid(row=2, column=1, padx=10, pady=10)
 
-        calculate_button = tk.Button(self.tab, text="Calculate Skidpad DV", command=self.calculate_skidpad_dv)
+        calculate_button = tk.Button(self.tab, text="Calculate Skidpad DV Score", command=self.calculate_skidpad_dv)
         calculate_button.grid(row=3, column=0, columnspan=10, pady=10)
 
         self.score_skidpad_dv = tk.Label(self.tab, text="")

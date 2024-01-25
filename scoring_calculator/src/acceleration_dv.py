@@ -13,9 +13,9 @@ class AccelerationDVTab:
     # at least one run without OC, USS, DNF or DQ
     def calculate_acceleration_dv(self):
         n_all = int(self.entry_n_all.get())
-        r_dvteam = int(self.entry_r_dv.get())
+        r_dv_team = int(self.entry_r_dv.get())
 
-        score = p_max * ((n_all + 1 - r_dvteam) / n_all)
+        score = p_max * ((n_all + 1 - r_dv_team) / n_all)
 
         self.score_acceleration_dv.config(text=f"Acceleration DV score: {score:.2f}")
 
@@ -27,15 +27,17 @@ class AccelerationDVTab:
         label_n_all.grid(row=1, column=0, padx=10, pady=10)
 
         self.entry_n_all = tk.Entry(self.tab)
+        self.entry_n_all.insert(0, "0.0")
         self.entry_n_all.grid(row=1, column=1, padx=10, pady=10)
 
         label_r_dv = tk.Label(self.tab, text="Team's position (incl. penalties):")
         label_r_dv.grid(row=2, column=0, padx=10, pady=10)
 
         self.entry_r_dv = tk.Entry(self.tab)
+        self.entry_r_dv.insert(0, "0.0")
         self.entry_r_dv.grid(row=2, column=1, padx=10, pady=10)
 
-        calculate_button = tk.Button(self.tab, text="Calculate Acceleration DV", command=self.calculate_acceleration_dv)
+        calculate_button = tk.Button(self.tab, text="Calculate Acceleration DV Score", command=self.calculate_acceleration_dv)
         calculate_button.grid(row=3, column=0, columnspan=10, pady=10)
 
         self.score_acceleration_dv = tk.Label(self.tab, text="")

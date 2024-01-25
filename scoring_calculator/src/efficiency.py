@@ -16,7 +16,6 @@ class EfficiencyTab:
         e_team = float(self.entry_e_team.get())
         t_min = float(self.entry_t_min.get())
         e_min = float(self.entry_e_min.get())
-
         ef_team = float(self.entry_ef_team.get())
         ef_min = float(self.entry_ef_min.get())
 
@@ -40,39 +39,45 @@ class EfficiencyTab:
         label_t_team.grid(row=1, column=0, padx=10, pady=10)
 
         self.entry_t_team = tk.Entry(self.tab)
+        self.entry_t_team.insert(0, "0.0")
         self.entry_t_team.grid(row=1, column=1, padx=10, pady=10)
 
         label_e_team = tk.Label(self.tab, text="[CV] used fuel mass / [EV] used energy by team:")
         label_e_team.grid(row=2, column=0, padx=10, pady=10)
 
         self.entry_e_team = tk.Entry(self.tab)
+        self.entry_e_team.insert(0, "0.0")
         self.entry_e_team.grid(row=2, column=1, padx=10, pady=10)
 
         label_t_min = tk.Label(self.tab, text="team lowest efficiency factor time without penalties:")
         label_t_min.grid(row=3, column=0, padx=10, pady=10)
 
         self.entry_t_min = tk.Entry(self.tab)
+        self.entry_t_min.insert(0, "0.0")
         self.entry_t_min.grid(row=3, column=1, padx=10, pady=10)
 
         label_e_min = tk.Label(self.tab, text="[CV] used fuel mass / [EV] used energy by team with lowest efficiency factor:")
         label_e_min.grid(row=4, column=0, padx=10, pady=10)
 
         self.entry_e_min = tk.Entry(self.tab)
+        self.entry_e_min.insert(0, "0.0")
         self.entry_e_min.grid(row=4, column=1, padx=10, pady=10)
 
         label_ef_team = tk.Label(self.tab, text="Team's efficiency factor:")
         label_ef_team.grid(row=5, column=0, padx=10, pady=10)
 
         self.entry_ef_team = tk.Entry(self.tab)
+        self.entry_ef_team.insert(0, "0.0")
         self.entry_ef_team.grid(row=5, column=1, padx=10, pady=10)
 
         label_ef_min = tk.Label(self.tab, text="Lowest efficiency factor of all teams:")
         label_ef_min.grid(row=6, column=0, padx=10, pady=10)
 
         self.entry_ef_min = tk.Entry(self.tab)
+        self.entry_ef_min.insert(0, "0.0")
         self.entry_ef_min.grid(row=6, column=1, padx=10, pady=10)
 
-        calculate_button = tk.Button(self.tab, text="Calculate Efficiency", command=self.calculate_efficiency)
+        calculate_button = tk.Button(self.tab, text="Calculate Efficiency Score", command=self.calculate_efficiency)
         calculate_button.grid(row=7, column=0, columnspan=10, pady=10)
 
         self.score_efficiency = tk.Label(self.tab, text="")

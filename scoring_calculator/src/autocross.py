@@ -39,39 +39,45 @@ class AutocrossTab:
         label_entry_t_team.grid(row=1, column=0, padx=10, pady=10)
 
         self.entry_t_team = tk.Entry(self.tab)
+        self.entry_t_team.insert(0, "0.0")
         self.entry_t_team.grid(row=1, column=1, padx=10, pady=10)
 
         label_t_team_cones = tk.Label(self.tab, text="Number of cones hit by team:")
         label_t_team_cones.grid(row=2, column=0, padx=10, pady=10)
 
         self.entry_t_team_cones = tk.Entry(self.tab)
+        self.entry_t_team_cones.insert(0, "0.0")
         self.entry_t_team_cones.grid(row=2, column=1, padx=10, pady=10)
 
         label_t_team_off = tk.Label(self.tab, text="Number of times being off-course by team:")
         label_t_team_off.grid(row=3, column=0, padx=10, pady=10)
 
         self.entry_t_team_off = tk.Entry(self.tab)
+        self.entry_t_team_off.insert(0, "0.0")
         self.entry_t_team_off.grid(row=3, column=1, padx=10, pady=10)
 
         label_t_max = tk.Label(self.tab, text="Time of fastest vehicle (inc. penalties):")
         label_t_max.grid(row=4, column=0, padx=10, pady=10)
 
         self.entry_t_max = tk.Entry(self.tab)
+        self.entry_t_max.insert(0, "0.0")
         self.entry_t_max.grid(row=4, column=1, padx=10, pady=10)
 
         label_t_max_cones = tk.Label(self.tab, text="Number of cones hit by fastest vehicle:")
         label_t_max_cones.grid(row=5, column=0, padx=10, pady=10)
 
         self.entry_t_max_cones = tk.Entry(self.tab)
+        self.entry_t_max_cones.insert(0, "0.0")
         self.entry_t_max_cones.grid(row=5, column=1, padx=10, pady=10)
 
         label_t_max_off = tk.Label(self.tab, text="Number of times being off-course by fastest vehicle:")
         label_t_max_off.grid(row=6, column=0, padx=10, pady=10)
 
         self.entry_t_max_off = tk.Entry(self.tab)
+        self.entry_t_max_off.insert(0, "0.0")
         self.entry_t_max_off.grid(row=6, column=1, padx=10, pady=10)
 
-        calculate_button = tk.Button(self.tab, text="Calculate Autocross", command=self.calculate_autocross)
+        calculate_button = tk.Button(self.tab, text="Calculate Autocross Score", command=self.calculate_autocross)
         calculate_button.grid(row=7, column=0, columnspan=10, pady=10)
 
         self.score_autocross = tk.Label(self.tab, text="")

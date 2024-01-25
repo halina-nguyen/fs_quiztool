@@ -19,7 +19,7 @@ class BPPTab:
         self.score_bpp.config(text=f"BPP score: {score:.2f}")
 
         # finalist
-        #  71 to 75 points
+        #  71 - 75 points
 
     def setup_ui(self):
         note = tk.Label(self.tab, text="Just for non-finalist.\nFinalists get 71 to 75 points.")
@@ -29,9 +29,10 @@ class BPPTab:
         label_p_team.grid(row=1, column=0, padx=10, pady=10)
 
         self.entry_p_team = tk.Entry(self.tab)
+        self.entry_p_team.insert(0, "0.0")
         self.entry_p_team.grid(row=1, column=1, padx=10, pady=10)
 
-        calculate_button = tk.Button(self.tab, text="Calculate BPP", command=self.calculate_bpp)
+        calculate_button = tk.Button(self.tab, text="Calculate BPP Score", command=self.calculate_bpp)
         calculate_button.grid(row=2, column=0, columnspan=10, pady=10)
 
         self.score_bpp = tk.Label(self.tab, text="")
