@@ -29,7 +29,7 @@ class BPPTab:
         label_p_team.grid(row=1, column=0, padx=10, pady=10)
 
         self.entry_p_team = tk.Entry(self.tab)
-        self.entry_p_team.insert(0, "0.0")
+        self.entry_p_team.insert(0, "0")
         self.entry_p_team.grid(row=1, column=1, padx=10, pady=10)
 
         calculate_button = tk.Button(self.tab, text="Calculate BPP Score", command=self.calculate_bpp)
