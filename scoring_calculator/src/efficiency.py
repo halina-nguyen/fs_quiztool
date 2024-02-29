@@ -27,7 +27,10 @@ class EfficiencyTab:
 
         ef_max = 1.5 * ef_min
 
-        score = 0.95 * p_max * ((ef_max - ef_team) / (ef_max - ef_min))
+        if (ef_max - ef_min):
+            score = 0.95 * p_max * ((ef_max - ef_team) / (ef_max - ef_min))
+        else:
+            score = 0
 
         self.score_efficiency.config(text=f"Efficiency score: {score:.2f}")
 
